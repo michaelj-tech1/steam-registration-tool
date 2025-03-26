@@ -28,5 +28,5 @@ The **Steam Account Automation Tool** is a Java-based application that programma
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/steam-account-automation-tool.git
+   git clone https://github.com/michaelj-tech1/steam-account-automation-tool.git
    cd steam-account-automation-tool

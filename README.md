@@ -1,26 +1,32 @@
 # Steam Account Automation Tool
 
 ## Overview
-The **Steam Account Automation Tool** is a Java-based application designed to streamline the process of creating Steam accounts. By programmatically completing all required form fields and handling verification steps, it greatly reduces the manual effort typically involved in setting up new accounts. The tool integrates with multiple SMS API services to automatically attach phone numbers for verification, ensuring a reliable and efficient account creation workflow.
+The **Steam Account Automation Tool** is a Java-based application that programmatically completes all required form fields and handles account verification steps to streamline the creation of new Steam accounts. It integrates multiple SMS API services for phone verification, uses **KeyAuth** for secure user authentication, and leverages **IMAP** to manage email verification. The application is also **multi-threaded** to enhance efficiency and scalability.
 
 ## Features
-- **Automated Account Creation**  
-  Programmatically fills out all necessary form fields on Steam, reducing the need for manual input.
-  
+- **Automated Registration**  
+  - Fully automates the Steam account creation process, minimizing manual input.
+- **KeyAuth Integration**  
+  - Implements a secure authentication layer to ensure that only authorized users can access the tool’s functionality.
 - **Multi-SMS API Integration**  
-  Integrates three separate SMS API services to attach phone numbers for verification, with built-in fallback and rotation logic for improved reliability.
-  
+  - Integrates three SMS APIs to handle phone verifications, offering fallback and rotation logic for high availability.
+- **IMAP Email Handling**  
+  - Uses IMAP to automatically retrieve verification emails and extract necessary confirmation codes.
+- **Multi-threading**  
+  - Creates and verifies multiple accounts in parallel, significantly reducing overall processing time.
 - **Java Swing UI**  
-  Includes a user-friendly interface built with Java Swing to manage generation settings, monitor progress, and handle SMS workflow in real time.
+  - Offers a user-friendly interface for real-time monitoring, configuration, and logging.
 
-## Requirements
-- **Java**: JDK 8 or later
-- **Maven** or **Gradle** (optional, depending on your build system)
-- **Internet Connection**: Required for SMS API calls and Steam interaction
-- **SMS API Keys**: You’ll need valid API keys/credentials for the SMS services you plan to use
+## Prerequisites
+- **Java 8** or higher (JDK recommended)
+- **Internet Connection** for Steam interactions, SMS API calls, and email retrieval
+- **SMS API Credentials** (keys or tokens) from your chosen SMS providers
+- **KeyAuth Credentials** (application credentials and user login details)
+- **Email Account** with IMAP enabled for verification retrieval
 
 ## Installation
-1. **Clone the Repository**  
+
+1. **Clone the Repository**
    ```bash
    git clone https://github.com/yourusername/steam-account-automation-tool.git
    cd steam-account-automation-tool
